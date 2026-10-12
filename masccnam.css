@@ -1,0 +1,378 @@
+@charset "UTF-8";
+
+
+* {
+  box-sizing: border-box;
+  }
+
+body {
+margin: 0;
+background: linear-gradient(135deg, #0d1117, #1f2937);
+font-family: Arial, sans-serif;
+min-height: 100vh;
+
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+
+.customer-form {
+width: 100%;
+display: flex;
+justify-content: center;
+padding: 10px;
+}
+
+.cards {
+	
+	
+width: min(700px, 95%);
+background: #ffffff;
+border-radius: 12px;
+padding: 12px 15px;
+
+
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+
+}
+
+/* HEADER */
+
+.header-customer {
+display: flex;
+align-items: center;
+
+
+padding-bottom: 7px;
+border-bottom: 1px solid #dfe5eb;
+
+
+}
+
+.header-left {
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+.header-img {
+width: 38px;
+height: 38px;
+
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+background: #e8f8fa;
+border-radius: 6px;
+overflow: hidden;
+
+
+}
+
+.header-img img {
+width: 29px;
+height: 29px;
+object-fit: contain;
+}
+
+.head-line {
+display: flex;
+flex-direction: column;
+gap: 1px;
+}
+
+.head-line h2 {
+margin: 0;
+color: #071d49;
+font-size: 15px;
+}
+
+.head-line h5 {
+margin: 0;
+color: #64748b;
+font-size: 9px;
+font-weight: 400;
+}
+
+/* MAIN LAYOUT */
+
+.main-layout {
+display: block;
+margin-top: 8px;
+}
+
+/* CARDS */
+
+.left-card,
+.right-card {
+width: 100%;
+
+
+border: 1px solid #d5e4eb;
+border-radius: 7px;
+
+padding: 7px;
+background: #fbfdfe;
+
+
+}
+
+/* SECTION */
+
+.section {
+border: 1px solid #d5e4eb;
+border-radius: 6px;
+
+
+padding: 7px 8px;
+margin-bottom: 7px;
+
+background: #ffffff;
+
+
+}
+
+.section:last-child {
+margin-bottom: 0;
+}
+
+.section-title {
+color: #079aaa;
+font-size: 12px;
+font-weight: 700;
+
+
+margin-bottom: 6px;
+
+
+}
+
+/* FIELD */
+
+.field {
+display: flex;
+flex-direction: column;
+
+
+gap: 2px;
+margin-bottom: 6px;
+
+
+}
+
+.field:last-child {
+margin-bottom: 0;
+}
+
+.field label {
+color: #172033;
+font-size: 12px;
+font-weight: 600;
+}
+
+/* INPUT */
+
+.field input,
+.field select {
+width: 100%;
+height: 27px;
+
+
+padding: 4px 7px;
+
+border: 1px solid #cbd5df;
+border-radius: 5px;
+
+background: #f8fafc;
+color: #172033;
+
+font-size: 12px;
+outline: none;
+
+
+}
+
+.field input:focus,
+.field select:focus {
+border-color: #08a6b2;
+
+
+box-shadow: 0 0 0 2px rgba(8, 166, 178, 0.08);
+
+
+}
+
+.field input::placeholder {
+color: #9aa6b2;
+font-size: 10px;
+}
+
+/* DEPOSIT NAMES */
+
+.deposit-row {
+display: grid;
+
+
+grid-template-columns: 1fr 1fr;
+
+gap: 8px;
+
+
+}
+
+.deposit-row .field {
+margin-bottom: 0;
+}
+
+.deposit-row .field input {
+height: 29px;
+font-size: 12px;
+}
+
+.deposit-row .field input::placeholder {
+font-size: 10px;
+}
+
+/* LOAN DETAILS */
+
+.right-grid {
+display: grid;
+
+
+grid-template-columns: 1fr 1fr;
+
+gap: 8px;
+
+
+}
+
+.right-grid .field {
+margin-bottom: 5px;
+}
+
+/* MATURITY */
+
+.maturity-row {
+display: grid;
+
+
+grid-template-columns: 1fr 1fr;
+
+gap: 8px;
+
+align-items: end;
+
+
+}
+
+.checkbox-field {
+display: flex;
+align-items: center;
+
+
+gap: 5px;
+margin-bottom: 6px;
+
+
+}
+
+.checkbox-field input {
+width: 14px;
+height: 14px;
+}
+
+.checkbox-field label {
+font-size: 12px;
+color: #172033;
+}
+
+/* SMALL INPUT */
+
+.small-input {
+width: 100% !important;
+}
+
+/* BUTTONS */
+
+.button-row {
+display: flex;
+justify-content: flex-end;
+
+
+gap: 7px;
+
+padding-top: 8px;
+margin-top: 7px;
+
+border-top: 1px solid #dfe5eb;
+
+
+}
+
+.btn {
+min-width: 65px;
+height: 28px;
+
+
+border: none;
+border-radius: 5px;
+
+font-size: 10px;
+font-weight: 600;
+
+cursor: pointer;
+
+
+}
+
+.btn.save {
+background: #08a6b2;
+color: white;
+}
+
+.btn.reset {
+background: #e5e7eb;
+color: #172033;
+}
+
+.btn.exit {
+background: #ef4444;
+color: white;
+}
+
+.btn:hover {
+opacity: 0.9;
+}
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+
+.cards {
+    width: 97%;
+    padding: 8px;
+}
+
+.deposit-row,
+.right-grid,
+.maturity-row {
+    grid-template-columns: 1fr;
+}
+
+.button-row {
+    justify-content: stretch;
+}
+
+.btn {
+    flex: 1;
+}
+
+
+}

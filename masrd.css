@@ -1,0 +1,752 @@
+@charset "UTF-8";
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d1117,
+            #1f2937
+        );
+
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.customer-form {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 8px;
+}
+
+
+/* =====================================================
+   MAIN CARD
+===================================================== */
+
+.cards {
+
+    width: min(920px, 95%);
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    padding: 10px 13px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header-customer {
+
+    display: flex;
+
+    align-items: center;
+
+    padding-bottom: 6px;
+
+    border-bottom:
+        1px solid #dfe5eb;
+}
+
+
+.header-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.header-img {
+
+    width: 34px;
+
+    height: 34px;
+
+    border-radius: 6px;
+
+    background: #e8f8fa;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #08a6b2;
+
+    font-size: 15px;
+}
+
+
+.head-line h2 {
+
+    margin: 0;
+
+    color: #071d49;
+
+    font-size: 14px;
+}
+.header-img img {
+
+    width: 32px;
+
+    height: 32px;
+
+    object-fit: contain;
+
+}
+
+
+.head-line h5 {
+
+    margin: 1px 0 0;
+
+    color: #64748b;
+
+    font-size: 8px;
+
+    font-weight: 400;
+}
+
+
+/* =====================================================
+   TWO COLUMN LAYOUT
+===================================================== */
+
+.main-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 8px;
+
+    margin-top: 7px;
+
+    align-items: start;
+}
+
+
+.left-card,
+.right-card {
+
+    border:
+        1px solid #d5e4eb;
+
+    border-radius: 7px;
+
+    padding: 6px;
+
+    background: #fbfdfe;
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.section {
+
+    border:
+        1px solid #d5e4eb;
+
+    border-radius: 6px;
+
+    padding: 6px 7px;
+
+    margin-bottom: 6px;
+
+    background: #ffffff;
+}
+
+
+.section:last-child {
+
+    margin-bottom: 0;
+}
+
+
+.section-title {
+
+    color: #079aaa;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 6px;
+}
+
+
+/* =====================================================
+   FIELD
+===================================================== */
+
+.field {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    margin-bottom: 5px;
+}
+
+
+.field label {
+
+    color: #172033;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.field input {
+
+    width: 100%;
+
+    height: 26px;
+
+    padding: 3px 6px;
+
+    border:
+        1px solid #cbd5df;
+
+    border-radius: 5px;
+
+    background: #f8fafc;
+
+    color: #172033;
+
+    font-size: 11px;
+
+    outline: none;
+}
+
+
+.field input:focus {
+
+    border-color: #08a6b2;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(8, 166, 178, 0.08);
+}
+
+
+.field input::placeholder {
+
+    color: #9aa6b2;
+
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   RD NAME
+===================================================== */
+
+.rd-name-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 7px;
+}
+
+
+.rd-name-row .field {
+
+    margin-bottom: 0;
+}
+
+
+.rd-name-row input {
+
+    height: 29px;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   INSTALLMENT
+===================================================== */
+
+.installment-input-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        0.7fr
+        1.5fr;
+        
+
+    gap: 6px;
+
+    align-items: end;
+}
+
+
+.installment-input-row .field {
+
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   ADD BUTTON
+===================================================== */
+
+.add-btn {
+
+    height: 26px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #08a6b2;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.add-btn:hover {
+
+    background: #078e99;
+}
+
+
+/* =====================================================
+   AGENT COMMISSION
+===================================================== */
+
+.agent-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        0.7fr
+        42px;
+
+    gap: 6px;
+
+    align-items: end;
+}
+
+
+.agent-row .field {
+
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.table-scroll {
+
+    width: 100%;
+
+    height: 100px;
+
+    overflow-y: auto;
+
+    overflow-x: auto;
+
+    margin-top: 6px;
+}
+
+
+.commission-table {
+
+    height: 82px;
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+}
+
+
+thead {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 2;
+
+    background: #e7f7f9;
+}
+
+
+th {
+
+    height: 24px;
+
+    padding: 3px 5px;
+
+    border:
+        1px solid #c8e4e8;
+
+    color: #172033;
+
+    font-size: 11px;
+
+    text-align: left;
+}
+
+
+td {
+
+    height: 22px;
+
+    padding: 3px 5px;
+
+    border:
+        1px solid #edf1f4;
+
+    color: #374151;
+
+    font-size: 11px;
+}
+
+
+.empty-row {
+
+    height: 55px;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    color: #9ca3af;
+}
+
+
+/* =====================================================
+   LOAN DETAILS
+===================================================== */
+
+.loan-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 7px;
+}
+
+
+.loan-grid .field {
+
+    margin-bottom: 0;
+}
+
+
+.loan-grid .field:last-child {
+
+    grid-column:
+        1 / 2;
+}
+
+
+/* =====================================================
+   DEFAULT SETTINGS
+===================================================== */
+
+.default-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 7px;
+}
+
+
+.default-grid .field {
+
+    margin-bottom: 0;
+}
+
+
+.penalty-type {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 5px;
+}
+
+
+.penalty-type label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 3px;
+
+    font-size: 10px;
+
+    color: #172033;
+}
+
+
+.penalty-type input {
+
+    width: 11px;
+
+    height: 11px;
+}
+
+
+.deposit-penalty {
+
+    width: 50%;
+
+    margin-top: 6px;
+
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   PRE MATURITY
+===================================================== */
+
+.small-field {
+
+    width: 40%;
+
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.button-row {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 6px;
+
+    padding-top: 7px;
+
+    margin-top: 5px;
+
+    border-top:
+        1px solid #dfe5eb;
+}
+
+
+.btn {
+
+    min-width: 62px;
+
+    height: 27px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.btn.save {
+
+    background: #08a6b2;
+
+    color: #ffffff;
+}
+
+
+.btn.reset {
+
+    background: #e5e7eb;
+
+    color: #172033;
+}
+
+
+.btn.exit {
+
+    background: #ef4444;
+
+    color: #ffffff;
+}
+
+
+.btn:hover {
+
+    opacity: 0.9;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .main-layout {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .cards {
+
+        width: 97%;
+
+        padding: 8px;
+    }
+
+
+    .rd-name-row,
+    .installment-input-row,
+    .agent-row,
+    .loan-grid,
+    .default-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .deposit-penalty,
+    .small-field {
+
+        width: 100%;
+    }
+
+
+    .button-row {
+
+        justify-content: stretch;
+    }
+
+
+    .btn {
+
+        flex: 1;
+    }
+
+}
+
+
+
+select {
+    width: 100%;
+
+    height: 28px;
+
+    padding: 6px 10px;
+
+    border:
+        1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    font-size: 0.7rem;
+
+    background-color: #f9fafb;
+}
+
+select:focus {
+    outline: none;
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.1);
+}

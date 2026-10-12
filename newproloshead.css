@@ -1,0 +1,596 @@
+@charset "UTF-8";
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+    margin: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d1117,
+            #1f2937
+        );
+
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =====================================================
+   MAIN FORM
+===================================================== */
+
+.customer-form {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px 10px;
+}
+
+
+/* =====================================================
+   MAIN CARD
+===================================================== */
+
+.cards {
+    width: 500px;
+
+    height: 300px;
+
+    background-color: #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.20);
+
+    padding:
+        10px 30px 25px;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header-customer {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    padding:
+        5px 0 10px;
+
+    border-bottom:
+        1px solid #e5e7eb;
+
+    gap: 8px;
+}
+
+
+/* =====================================================
+   HEADER MAIN
+===================================================== */
+
+.header-main {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    width: 100%;
+
+    height: 40px;
+}
+
+
+/* =====================================================
+   HEADER LEFT
+===================================================== */
+
+.header-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* =====================================================
+   HEADER IMAGE
+===================================================== */
+
+.header-img {
+    width: 60px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.header-img img {
+    width: 40px;
+
+    height: 50px;
+
+    object-fit: contain;
+}
+
+
+/* =====================================================
+   HEADER TEXT
+===================================================== */
+
+.head-line {
+    display: flex;
+
+    flex-direction: column;
+
+    position: relative;
+
+    top: 2px;
+}
+
+
+.head-line h2 {
+    margin: 0;
+
+    color: #031946;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.head-line h5 {
+    margin: 3px 0 0;
+
+    color: #6b7280;
+
+    font-size: 10px;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.card {
+    width: 100%;
+
+    padding-top: 18px;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.lines {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    margin-bottom: 18px;
+}
+
+
+.lines h3 {
+    margin: 0;
+
+    color: #1f73c9;
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   REQUIRED
+===================================================== */
+
+.required {
+    color: red;
+
+    margin-left: 4px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   ROW
+===================================================== */
+
+.row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(100px, 1fr)
+        );
+
+    gap: 12px;
+
+    align-items: end;
+
+    margin-bottom: 10px;
+}
+
+
+/* =====================================================
+   TWO COLUMN
+===================================================== */
+
+.two-col {
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+}
+
+
+/* =====================================================
+   THREE COLUMN
+===================================================== */
+
+.three-col {
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+}
+
+
+/* =====================================================
+   ONE COLUMN
+===================================================== */
+
+.one-col {
+    grid-template-columns:
+        minmax(0, 1fr);
+
+    width: 100%;
+}
+
+
+/* =====================================================
+   FIELD
+===================================================== */
+
+.field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    min-width: 0;
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.field label {
+    font-weight: 600;
+
+    color: #1f2937;
+
+    font-size: 0.82rem;
+
+    line-height: 1.2;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+input,
+select {
+    width: 100%;
+
+    height: 36px;
+
+    padding:
+        6px 10px;
+
+    border:
+        1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    font-size: 0.9rem;
+
+    background-color: #f9fafb;
+
+    color: #111827;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =====================================================
+   INPUT FOCUS
+===================================================== */
+
+input:focus,
+select:focus {
+    outline: none;
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            37,
+            99,
+            235,
+            0.10
+        );
+}
+
+
+/* =====================================================
+   BUTTON ROW
+===================================================== */
+
+.button-row {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding-top: 15px;
+
+    border-top:
+        1px solid #e5e7eb;
+}
+
+
+/* =====================================================
+   COMMON BUTTON
+===================================================== */
+
+.btn {
+    border: none;
+
+    border-radius: 10px;
+
+    min-width: 95px;
+
+    height: 38px;
+
+    padding:
+        8px 20px;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =====================================================
+   CANCEL
+===================================================== */
+
+.btn.cancle {
+    background-color: #e5e7eb;
+
+    color: #111827;
+
+    border:
+        1px solid #d1d5db;
+}
+
+
+.btn.cancle:hover {
+    background-color: #d1d5db;
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 4px 10px
+        rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+}
+
+
+/* =====================================================
+   SAVE
+===================================================== */
+
+.btn.save {
+    background-color: #2563eb;
+
+    color: #ffffff;
+
+    border:
+        1px solid #2563eb;
+}
+
+
+.btn.save:hover {
+    background-color: #1d4ed8;
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 4px 10px
+        rgba(
+            37,
+            99,
+            235,
+            0.25
+        );
+}
+
+
+/* =====================================================
+   EXIT
+===================================================== */
+
+.btn.exit {
+    background-color: #dc2626;
+
+    color: #ffffff;
+
+    border:
+        1px solid #dc2626;
+}
+
+
+.btn.exit:hover {
+    background-color: #b91c1c;
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 4px 10px
+        rgba(
+            220,
+            38,
+            38,
+            0.25
+        );
+}
+
+
+/* =====================================================
+   BUTTON ACTIVE
+===================================================== */
+
+.btn:active {
+    transform: translateY(0);
+
+    box-shadow: none;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .cards {
+        width: 95vw;
+
+        min-height: auto;
+
+        padding:
+            10px 20px 20px;
+    }
+
+
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+
+
+    .button-row {
+        justify-content: stretch;
+
+        gap: 8px;
+    }
+
+
+    .btn {
+        flex: 1;
+
+        min-width: 0;
+    }
+
+}
+
+.message-box {
+    width: 90%;
+    margin: 15px auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+    border: 1px solid red;
+    border-radius: 6px;
+    background-color: #fff5f5;
+}

@@ -1,0 +1,1337 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d1117,
+            #1f2937
+        );
+
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.customer-form {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 10px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.cards {
+    width: min(680px, 94%);
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    padding: 10px 15px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.25);
+
+    min-height: 300px;
+}
+
+
+/* =====================================================
+   STEP 1 CARD
+===================================================== */
+
+.step1-card {
+    min-height: 480px;
+}
+
+
+/* =====================================================
+   STEP 2 + STEP 3 SMALL CARD
+===================================================== */
+
+.small-card {
+    min-height: 300px;
+
+    height: auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header-customer {
+    display: flex;
+
+    align-items: center;
+
+    padding-bottom: 8px;
+
+    border-bottom:
+        1px solid #dfe5eb;
+}
+
+
+.header-main {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.header-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.header-img {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #e8f8fa;
+
+    border-radius: 6px;
+
+    flex-shrink: 0;
+}
+
+
+.header-img img {
+    width: 29px;
+    height: 29px;
+
+    object-fit: contain;
+}
+
+
+.head-line {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+.head-line h2 {
+    margin: 0;
+
+    color: #071d49;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+.head-line h5 {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 9px;
+
+    font-weight: 400;
+}
+
+
+/* =====================================================
+   PHOTO / SIGNATURE BUTTONS
+===================================================== */
+
+.nav-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.nav-btn {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    border:
+        1px solid #cbd5df;
+
+    background: #f8fafc;
+
+    border-radius: 6px;
+
+    padding: 5px 8px;
+
+    cursor: pointer;
+}
+
+
+.nav-btn:hover {
+    background: #eef2f7;
+}
+
+
+.nav-btn img {
+    width: 18px;
+    height: 18px;
+
+    object-fit: contain;
+}
+
+
+.nav-btn h2 {
+    margin: 0;
+
+    color: #1d4ed8;
+
+    font-size: 11px;
+}
+
+
+.nav-btn h6 {
+    margin: 1px 0 0;
+
+    color: #6b7280;
+
+    font-size: 8px;
+
+    font-weight: 400;
+}
+
+
+.nav-btn input[type="file"] {
+    display: none;
+}
+
+
+.upload-text {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    line-height: 1.1;
+}
+
+
+.upload-message {
+    min-height: 15px;
+
+    font-size: 9px;
+
+    color: #dc2626;
+
+    text-align: right;
+
+    display: none;
+}
+
+
+.upload-message.show {
+    display: block;
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.card {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 12px;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.lines {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    margin-bottom: 2px;
+}
+
+
+.lines h3 {
+    margin: 0;
+
+    padding: 0;
+
+    color: rgb(37, 174, 228);
+
+    font-size: 16px;
+
+    line-height: 1.2;
+}
+
+
+.lines h5 {
+    margin: 0;
+
+    padding: 0;
+
+    color: #64748b;
+
+    font-size: 9px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+
+/* =====================================================
+   ROW
+===================================================== */
+
+.row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 10px;
+
+    align-items: end;
+}
+
+
+.row.two-col {
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+}
+
+
+.kyc-row {
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+}
+
+
+/* =====================================================
+   FIELD
+===================================================== */
+
+.field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    min-width: 0;
+}
+
+
+.field label {
+    color: #172033;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    line-height: 1.1;
+}
+
+
+.required {
+    color: red;
+
+    margin-left: 3px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   INPUT + SELECT
+===================================================== */
+
+input,
+select {
+    width: 100%;
+
+    height: 29px;
+
+    border:
+        1px solid #cbd5df;
+
+    border-radius: 6px;
+
+    background: #f8fafc;
+
+    padding:
+        4px 8px;
+
+    color: #172033;
+
+    font-size: 11px;
+
+    outline: none;
+}
+
+
+input:focus,
+select:focus {
+    border-color: #08a6b2;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(
+            8,
+            166,
+            178,
+            0.10
+        );
+}
+
+
+input::placeholder {
+    color: #9aa6b2;
+
+    font-size: 9px;
+}
+
+
+input[readonly] {
+    background: #f1f5f9;
+
+    color: #64748b;
+}
+
+
+/* =====================================================
+   RADIO
+===================================================== */
+
+.radio-group {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    height: 29px;
+}
+
+
+.radio-group label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    color: #374151;
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    cursor: pointer;
+}
+
+
+.radio-group input {
+    width: 12px;
+
+    height: 12px;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   BUTTON ROW
+===================================================== */
+
+.button-row {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 5px;
+
+    padding-top: 7px;
+
+    border-top:
+        1px solid #dfe5eb;
+}
+
+
+.btn {
+    width: 75px;
+
+    height: 29px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.btn.next {
+    background: #08a6b2;
+
+    color: #ffffff;
+}
+
+
+.btn.next:hover {
+    background: #078e99;
+}
+
+
+.btn.back {
+    background: #e5e7eb;
+
+    color: #172033;
+}
+
+
+.btn.back:hover {
+    background: #d5d8dc;
+}
+
+
+.btn.cancel {
+    background: #e5e7eb;
+
+    color: #172033;
+}
+
+
+.btn.cancel:hover {
+    background: #d5d8dc;
+}
+
+
+/* =====================================================
+   KYC ADD BUTTON
+===================================================== */
+
+.btn.add-kyc {
+    width: 100%;
+
+    height: 29px;
+
+    background: #08a6b2;
+
+    color: #ffffff;
+
+    padding: 0 8px;
+}
+
+
+.btn.add-kyc:hover {
+    background: #078e99;
+}
+
+
+.button-field {
+    justify-content: flex-end;
+}
+
+
+/* =====================================================
+   KYC TABLE
+===================================================== */
+
+.table-wrap {
+    width: 100%;
+
+    margin-top: 5px;
+
+    overflow-x: auto;
+}
+
+
+.kyc-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 9px;
+
+    border:
+        1px solid #d5e4eb;
+}
+
+
+.kyc-table th {
+    background: #f1f5f9;
+
+    color: #172033;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    padding: 6px;
+
+    border:
+        1px solid #d5e4eb;
+
+    text-align: left;
+}
+
+
+.kyc-table td {
+    padding: 5px 6px;
+
+    border:
+        1px solid #e2e8f0;
+
+    color: #374151;
+
+    font-size: 9px;
+}
+
+
+.kyc-table tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+
+.upload-cell.success {
+    color: #16a34a;
+
+    font-weight: 600;
+}
+
+
+.upload-cell.error {
+    color: #dc2626;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   KYC REMOVE BUTTON
+===================================================== */
+
+.kyc-table button {
+    height: 23px;
+
+    padding: 0 7px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #ef4444;
+
+    color: white;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+
+.kyc-table button:hover {
+    background: #dc2626;
+}
+
+
+/* =====================================================
+   KYC FILE INPUT
+===================================================== */
+
+.upload-field {
+    justify-content: flex-end;
+}
+
+
+.upload-box {
+    width: 100%;
+
+    height: 29px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    border:
+        1px solid #cbd5df;
+
+    border-radius: 6px;
+
+    background: #f8fafc;
+
+    padding: 4px 8px;
+
+    cursor: pointer;
+
+    font-size: 10px;
+}
+
+
+.upload-box:hover {
+    background: #eef2f7;
+}
+
+
+.upload-box img {
+    width: 16px;
+
+    height: 16px;
+
+    object-fit: contain;
+}
+
+
+/* =====================================================
+   SMALL CARD CONTENT
+===================================================== */
+
+.small-card .card {
+    margin-top: 10px;
+
+    gap: 10px;
+}
+
+
+.small-card .lines h3 {
+    font-size: 15px;
+}
+
+
+.small-card .lines h5 {
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   STEP 2
+===================================================== */
+
+#step2 .card {
+    min-height: 210px;
+}
+
+
+/* =====================================================
+   STEP 3
+===================================================== */
+
+#step3 .card {
+    min-height: 240px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .row {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+    .kyc-row {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+    .cards {
+        width: 96%;
+
+        padding: 9px 10px;
+    }
+
+
+    .step1-card {
+        min-height: 450px;
+    }
+
+
+    .row,
+    .row.two-col,
+    .kyc-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    .nav-actions {
+        gap: 4px;
+    }
+
+
+    .nav-btn {
+        padding: 4px;
+    }
+
+
+    .nav-btn h2 {
+        font-size: 9px;
+    }
+
+
+    .nav-btn h6 {
+        font-size: 7px;
+    }
+
+
+    .button-row {
+        justify-content: stretch;
+    }
+
+
+    .btn {
+        flex: 1;
+
+        width: auto;
+    }
+
+}
+
+/* =====================================================
+   KYC CHOOSE FILE
+===================================================== */
+
+.kyc-file-input {
+    display: none;
+}
+
+
+/* Main choose-file box */
+
+.kyc-upload-box {
+    width: 100%;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    border: 1px solid #cbd5df;
+    border-radius: 6px;
+
+    background: #f8fafc;
+
+    padding: 4px 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+/* Hover */
+
+.kyc-upload-box:hover {
+    background: #f1fbfc;
+    border-color: #08a6b2;
+}
+
+
+/* Upload icon */
+
+.kyc-upload-icon {
+    width: 17px;
+    height: 17px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+
+/* Text area */
+
+.kyc-upload-text {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    line-height: 1.05;
+
+    min-width: 0;
+}
+
+
+/* Choose File */
+
+.kyc-upload-title {
+    color: #1d4ed8;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    max-width: 180px;
+}
+
+
+/* JPG PNG */
+
+.kyc-upload-subtitle {
+    color: #64748b;
+
+    font-size: 7px;
+
+    font-weight: 400;
+
+    margin-top: 1px;
+}
+
+
+/* Selected file */
+
+.kyc-upload-title.selected {
+    color: #16a34a;
+}
+
+.upload-icon {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e8f8fa;
+
+    border-radius: 6px;
+
+    font-size: 17px;
+
+    flex-shrink: 0;
+}
+
+
+@media (max-width: 400px) {
+
+    .header-main {
+        align-items: flex-start;
+    }
+
+
+    .nav-actions {
+        flex-direction: column;
+    }
+
+
+    .nav-btn {
+        width: 100%;
+    }
+
+}
+/* =====================================================
+   MULTI STEP FORM
+   ===================================================== */
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+
+.step-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 30px;
+}
+
+.progress-step {
+    text-align: center;
+    min-width: 80px;
+}
+
+.step-number {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ccc;
+    background: white;
+}
+
+.step-title {
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+.progress-line {
+    width: 80px;
+    height: 2px;
+    background: #ccc;
+}
+
+.progress-step.active .step-number {
+    background: #333;
+    color: white;
+    border-color: #333;
+}
+
+.progress-step.completed .step-number {
+    background: green;
+    color: white;
+    border-color: green;
+}
+
+.progress-step.completed .step-number::after {
+    content: "✓";
+}
+
+.progress-step.completed .step-number {
+    font-size: 0;
+}
+
+.progress-step.completed .step-number::after {
+    font-size: 18px;
+}
+
+/* =====================================================
+   3 STEP INDICATOR
+   ===================================================== */
+
+.step-progress {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0 20px;
+}
+
+.progress-step {
+    min-width: 110px;
+    text-align: center;
+}
+
+.step-number {
+    width: 32px;
+    height: 32px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 2px solid #cbd5df;
+    background: white;
+    color: #64748b;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.step-title {
+    margin-top: 5px;
+    font-size: 9px;
+    font-weight: 600;
+    color: #64748b;
+    white-space: nowrap;
+}
+
+
+/* CURRENT */
+
+.progress-step.active .step-number {
+    background: #08a6b2;
+    border-color: #08a6b2;
+    color: white;
+}
+
+.progress-step.active .step-title {
+    color: #08a6b2;
+}
+
+
+/* COMPLETED */
+
+.progress-step.completed .step-number {
+    background: #16a34a;
+    border-color: #16a34a;
+    color: white;
+
+    font-size: 0;
+}
+
+.progress-step.completed .step-number::after {
+    content: "✓";
+    font-size: 16px;
+}
+
+.progress-step.completed .step-title {
+    color: #16a34a;
+}
+
+
+/* LINE */
+
+.progress-line {
+    width: 80px;
+    height: 2px;
+
+    background: #cbd5df;
+
+    margin: 0 5px 20px;
+}
+
+.progress-line.completed {
+    background: #16a34a;
+}
+
+
+@media (max-width: 600px) {
+
+    .progress-step {
+        min-width: 75px;
+    }
+
+    .progress-line {
+        width: 35px;
+    }
+
+    .step-title {
+        font-size: 7px;
+    }
+
+}
+/* =====================================================
+   FINAL KYC LAYOUT FIX
+   ===================================================== */
+
+#step3 {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+#step3 .card {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* KYC fields */
+#step3 .kyc-row {
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+#step3 .field {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#step3 input,
+#step3 select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Upload box */
+#step3 .kyc-upload-box {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Table */
+#step3 .table-wrap {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+#step3 .kyc-table {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   SCREEN WIDTH FIX
+   ===================================================== */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.customer-form {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   MASTER ADD BUTTON
+   ================================ */
+
+.master-field-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.master-field-row select {
+    flex: 1;
+    min-width: 0;
+}
+
+.master-add-btn {
+    height: 20px;
+    padding: 0 14px;
+    border: 1px solid #2563eb;
+    border-radius: 6px;
+    background: #4367bc;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.2s ease;
+}
+
+.master-add-btn:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+.master-add-btn:active {
+    transform: scale(0.97);
+}
+
+/* =====================================================
+   SMALL SCREEN
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+    #step3 .kyc-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 560px) {
+
+    #step3 .kyc-row {
+        grid-template-columns: 1fr;
+    }
+
+}

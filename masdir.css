@@ -1,0 +1,712 @@
+@charset "UTF-8";
+
+
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d1117,
+            #1f2937
+        );
+
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.customer-form {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 8px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.cards {
+
+    width: min(820px, 94%);
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    padding: 11px 15px;
+
+    box-shadow:
+        0 10px 28px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header-customer {
+
+    display: flex;
+
+    align-items: center;
+
+    padding-bottom: 7px;
+
+    border-bottom:
+        1px solid #dfe5eb;
+}
+
+
+.header-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.header-img {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #e8f8fa;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+}
+
+
+.header-img img {
+
+    width: 29px;
+
+    height: 29px;
+
+    object-fit: contain;
+}
+
+
+.head-line {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1px;
+}
+
+
+.head-line h2 {
+
+    margin: 0;
+
+    color: #071d49;
+
+    font-size: 15px;
+}
+
+
+.head-line h5 {
+
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 9px;
+
+    font-weight: 400;
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.section {
+
+    border:
+        1px solid #d5e4eb;
+
+    border-radius: 8px;
+
+    padding: 7px 9px;
+
+    margin-top: 7px;
+
+    background: #fbfdfe;
+}
+
+
+.section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #079aaa;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-bottom: 6px;
+}
+
+
+.section-icon {
+
+    width: 20px;
+
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: #e4f8fa;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   FIELD
+===================================================== */
+
+.field {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.field label {
+
+    color: #172033;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   INPUT / SELECT
+===================================================== */
+
+.field input,
+.field select {
+
+    width: 100%;
+
+    height: 29px;
+
+    border:
+        1px solid #cbd5df;
+
+    border-radius: 6px;
+
+    background: #f8fafc;
+
+    padding:
+        4px 7px;
+
+    color: #172033;
+
+    font-size: 12px;
+
+    outline: none;
+}
+
+
+.field input:focus,
+.field select:focus {
+
+    border-color: #08a6b2;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(8, 166, 178, 0.10);
+}
+
+
+.field input::placeholder {
+
+    color: #9aa6b2;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   BRANCH
+===================================================== */
+
+.branch-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        150px;
+
+    gap: 10px;
+
+    align-items: end;
+}
+
+
+.checkbox-field {
+
+    height: 29px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.checkbox-field label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #172033;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.checkbox-field input {
+
+    width: 15px;
+
+    height: 15px;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   DIRECTOR
+===================================================== */
+
+.director-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1fr
+        65px;
+
+    gap: 10px;
+
+    align-items: end;
+}
+
+
+/* =====================================================
+   ADD BUTTON
+===================================================== */
+
+.add-field {
+
+    display: flex;
+
+    align-items: flex-end;
+}
+
+
+.add-btn {
+
+    width: 65px;
+
+    height: 29px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #08a6b2;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.add-btn:hover {
+
+    background: #078e99;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 10px;
+}
+
+
+.address-row {
+      display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    margin-top: 8px;
+
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.table-card {
+
+    border:
+        1px solid #d5e4eb;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    margin-top: 8px;
+}
+
+
+.table-header {
+
+    padding:
+        6px 8px;
+
+    background:
+        #f0fafb;
+
+    border-bottom:
+        1px solid #d5e4eb;
+}
+
+
+.table-header h3 {
+
+    margin: 0;
+
+    color: #079aaa;
+
+    font-size: 12px;
+}
+
+
+.table-header span {
+
+    display: block;
+
+    margin-top: 1px;
+
+    color: #718096;
+
+    font-size: 10px;
+}
+
+
+.table-scroll {
+
+    height: 100px;
+
+    overflow-y: auto;
+
+    overflow-x: auto;
+}
+
+
+table {
+
+    width: 100%;
+
+    min-width: 600px;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+}
+
+
+thead {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 2;
+
+    background: #e7f7f9;
+}
+
+
+th {
+
+    height: 25px;
+
+    padding:
+        4px 6px;
+
+    border-right:
+        1px solid #c8e4e8;
+
+    color: #172033;
+
+    font-size: 10px;
+
+    text-align: left;
+}
+
+
+td {
+
+    height: 24px;
+
+    padding:
+        4px 6px;
+
+    border-bottom:
+        1px solid #edf1f4;
+
+    color: #374151;
+
+    font-size: 12px;
+}
+
+
+.empty-row {
+
+    height: 70px;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    color: #9ca3af;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.button-row {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 6px;
+
+    margin-top: 8px;
+
+    padding-top: 7px;
+
+    border-top:
+        1px solid #e1e7ec;
+}
+
+
+.btn {
+
+    min-width: 65px;
+
+    height: 28px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.btn.save {
+
+    background: #08a6b2;
+
+    color: #ffffff;
+}
+
+
+.btn.save:hover {
+
+    background: #078e99;
+}
+
+
+.btn.reset {
+
+    background: #e5e7eb;
+
+    color: #172033;
+}
+
+
+.btn.reset:hover {
+
+    background: #d5d8dc;
+}
+
+
+.btn.exit {
+
+    background: #ef4444;
+
+    color: #ffffff;
+}
+
+
+.btn.exit:hover {
+
+    background: #dc2626;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .director-row {
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .branch-row,
+    .director-row,
+    .contact-row {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .cards {
+
+        width: 96%;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .cards {
+
+        width: 97%;
+
+        padding: 9px;
+
+    }
+
+
+    .button-row {
+
+        justify-content: stretch;
+
+    }
+
+
+    .btn {
+
+        flex: 1;
+
+    }
+
+}
+

@@ -1,0 +1,2362 @@
+@charset "UTF-8";
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d1117,
+            #1f2937
+        );
+
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.customer-form {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 10px;
+}
+
+
+/* =====================================================
+   MAIN CARD
+===================================================== */
+
+.cards {
+    width: min(680px, 94%);
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    padding: 10px 15px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.25);
+
+    min-height: 300px;
+}
+
+
+/* =====================================================
+   STEP 1 CARD
+===================================================== */
+
+.step1-card {
+    min-height: 480px;
+}
+
+
+/* =====================================================
+   STEP 2 + STEP 3 CARD
+===================================================== */
+
+.small-card {
+    min-height: 300px;
+
+    height: auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header-customer {
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #dfe5eb;
+}
+
+.header-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.header-img {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8f8fa;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.header-img img {
+    width: 29px;
+    height: 29px;
+    object-fit: contain;
+}
+
+.head-line {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    position: relative;
+    right: 440px;
+}
+
+.head-line h2 {
+    margin: 0;
+    color: #071d49;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.head-line h5 {
+    margin: 0;
+    color: #64748b;
+    font-size: 9px;
+    font-weight: 400;
+}
+
+/* =====================================================
+   PHOTO / SIGNATURE BUTTONS
+===================================================== */
+
+.nav-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.nav-btn {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    border:
+        1px solid #cbd5df;
+
+    background: #f8fafc;
+
+    border-radius: 6px;
+
+    padding: 5px 8px;
+
+    cursor: pointer;
+}
+
+
+.nav-btn:hover {
+    background: #eef2f7;
+}
+
+
+.nav-btn img {
+    width: 18px;
+    height: 18px;
+
+    object-fit: contain;
+}
+
+
+.nav-btn h2 {
+    margin: 0;
+
+    color: #1d4ed8;
+
+    font-size: 11px;
+}
+
+
+.nav-btn h6 {
+    margin: 1px 0 0;
+
+    color: #6b7280;
+
+    font-size: 8px;
+
+    font-weight: 400;
+}
+
+
+.nav-btn input[type="file"] {
+    display: none;
+}
+
+
+.upload-text {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    line-height: 1.1;
+}
+
+
+.upload-message {
+    min-height: 15px;
+
+    font-size: 9px;
+
+    color: #dc2626;
+
+    text-align: right;
+
+    display: none;
+}
+
+
+.upload-message.show {
+    display: block;
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.card {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 12px;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.lines {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    margin-bottom: 2px;
+}
+
+
+.lines h3 {
+    margin: 0;
+
+    padding: 0;
+
+    color: rgb(37, 174, 228);
+
+    font-size: 16px;
+
+    line-height: 1.2;
+}
+
+
+.lines h5 {
+    margin: 0;
+
+    padding: 0;
+
+    color: #64748b;
+
+    font-size: 9px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+
+/* =====================================================
+   ROW
+===================================================== */
+
+.row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 10px;
+
+    align-items: end;
+}
+
+
+.row.two-col {
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+}
+
+
+.kyc-row {
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+}
+
+
+/* =====================================================
+   FIELD
+===================================================== */
+
+.field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    min-width: 0;
+
+    width: 100%;
+}
+
+
+.field label {
+    color: #172033;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    line-height: 1.1;
+}
+
+
+.required {
+    color: red;
+
+    margin-left: 3px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   INPUT + SELECT
+===================================================== */
+
+input,
+select {
+    width: 100%;
+
+    height: 29px;
+
+    border:
+        1px solid #cbd5df;
+
+    border-radius: 6px;
+
+    background: #f8fafc;
+
+    padding:
+        4px 8px;
+
+    color: #172033;
+
+    font-size: 11px;
+
+    outline: none;
+}
+
+
+input:focus,
+select:focus {
+    border-color: #08a6b2;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(
+            8,
+            166,
+            178,
+            0.10
+        );
+}
+
+
+input::placeholder {
+    color: #9aa6b2;
+
+    font-size: 9px;
+}
+
+
+input[readonly] {
+    background: #f1f5f9;
+
+    color: #64748b;
+}
+
+
+/* =====================================================
+   DATE
+===================================================== */
+
+input[type="date"] {
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   RADIO
+===================================================== */
+
+.radio-group {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    height: 29px;
+}
+
+
+.radio-group label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    color: #374151;
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    cursor: pointer;
+}
+
+
+.radio-group input {
+    width: 12px;
+
+    height: 12px;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   GENDER
+===================================================== */
+
+.gender-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    height: 29px;
+}
+
+
+.gender-box label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    color: #374151;
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    cursor: pointer;
+}
+
+
+.gender-box input {
+    width: 12px;
+
+    height: 12px;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   CHECKBOX
+===================================================== */
+
+.checkbox-field {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    height: 29px;
+
+    font-weight: normal;
+}
+
+
+.checkbox-field input {
+    width: auto;
+
+    height: auto;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   MASTER FIELD ROW
+   SELECT + ADD
+===================================================== */
+
+.master-field-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: 100%;
+}
+
+
+.master-field-row select {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+/* =====================================================
+   MASTER ADD BUTTON
+===================================================== */
+
+.master-add-btn {
+    height: 19px;
+   
+    
+
+    padding: 5px;
+
+    border:
+        1px solid #2563eb;
+
+    border-radius: 6px;
+
+    background: #4367bc;
+
+    color: #ffffff;
+
+    font-size: 8px;
+
+   /* font-weight: 500;*/
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+}
+
+
+.master-add-btn:hover {
+    background: #1d4ed8;
+
+    border-color: #1d4ed8;
+}
+
+
+.master-add-btn:active {
+    transform: scale(0.97);
+}
+
+
+/* =====================================================
+   GENERIC ADD BUTTON
+===================================================== */
+
+.btn.add-btn {
+    height: 29px;
+
+    padding: 0 14px;
+
+    background: #4367bc;
+
+    color: #ffffff;
+
+    font-size: 11px;
+}
+
+
+.btn.add-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =====================================================
+   BUTTON ROW
+===================================================== */
+
+.button-row {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 5px;
+
+    padding-top: 7px;
+
+    border-top:
+        1px solid #dfe5eb;
+}
+
+
+.btn {
+    width: 75px;
+
+    height: 29px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   NEXT
+===================================================== */
+
+.btn.next {
+    background: #08a6b2;
+
+    color: #ffffff;
+}
+
+
+.btn.next:hover {
+    background: #078e99;
+}
+
+
+/* =====================================================
+   BACK
+===================================================== */
+
+.btn.back {
+    background: #e5e7eb;
+
+    color: #172033;
+}
+
+
+.btn.back:hover {
+    background: #d5d8dc;
+}
+
+
+/* =====================================================
+   CANCEL
+===================================================== */
+
+.btn.cancel {
+    background: #e5e7eb;
+
+    color: #172033;
+}
+
+
+.btn.cancel:hover {
+    background: #d5d8dc;
+}
+
+
+/* =====================================================
+   KYC ADD BUTTON
+===================================================== */
+
+.btn.add-kyc {
+    width: 100%;
+
+    height: 29px;
+
+    background: #08a6b2;
+
+    color: #ffffff;
+
+    padding: 0 8px;
+}
+
+
+.btn.add-kyc:hover {
+    background: #078e99;
+}
+
+
+.button-field {
+    justify-content: flex-end;
+}
+
+
+/* =====================================================
+   TABLE WRAPPER
+===================================================== */
+
+.table-wrap {
+    width: 100%;
+
+    margin-top: 5px;
+
+    overflow-x: auto;
+}
+
+
+/* =====================================================
+   KYC TABLE
+===================================================== */
+
+.kyc-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 9px;
+
+    border:
+        1px solid #d5e4eb;
+}
+
+
+.kyc-table th {
+    background: #f1f5f9;
+
+    color: #172033;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    padding: 6px;
+
+    border:
+        1px solid #d5e4eb;
+
+    text-align: left;
+}
+
+
+.kyc-table td {
+    padding: 5px 6px;
+
+    border:
+        1px solid #e2e8f0;
+
+    color: #374151;
+
+    font-size: 9px;
+}
+
+
+.kyc-table tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+
+.kyc-table tbody tr:hover {
+    background: #f1f5f9;
+}
+
+
+/* =====================================================
+   UPLOAD CELL
+===================================================== */
+
+.upload-cell.success {
+    color: #16a34a;
+
+    font-weight: 600;
+}
+
+
+.upload-cell.error {
+    color: #dc2626;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   KYC REMOVE BUTTON
+===================================================== */
+
+.kyc-table button {
+    height: 23px;
+
+    padding: 0 7px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #ef4444;
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+
+.kyc-table button:hover {
+    background: #dc2626;
+}
+
+
+/* =====================================================
+   DELETE BUTTON
+===================================================== */
+
+.delete-btn {
+    height: 23px;
+
+    padding: 0 7px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #ef4444;
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
+
+/* =====================================================
+   KYC FILE INPUT
+===================================================== */
+
+.upload-field {
+    justify-content: flex-end;
+}
+
+
+.upload-box {
+    width: 100%;
+
+    height: 29px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    border:
+        1px solid #cbd5df;
+
+    border-radius: 6px;
+
+    background: #f8fafc;
+
+    padding: 4px 8px;
+
+    cursor: pointer;
+
+    font-size: 10px;
+}
+
+
+.upload-box:hover {
+    background: #eef2f7;
+}
+
+
+.upload-box img {
+    width: 16px;
+
+    height: 16px;
+
+    object-fit: contain;
+}
+
+
+/* =====================================================
+   KYC CHOOSE FILE
+===================================================== */
+
+.kyc-file-input {
+    display: none;
+}
+
+
+.kyc-upload-box {
+    width: 100%;
+
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    border:
+        1px solid #cbd5df;
+
+    border-radius: 6px;
+
+    background: #f8fafc;
+
+    padding: 4px 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.kyc-upload-box:hover {
+    background: #f1fbfc;
+
+    border-color: #08a6b2;
+}
+
+
+.kyc-upload-icon {
+    width: 17px;
+
+    height: 17px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+
+.kyc-upload-text {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    line-height: 1.05;
+
+    min-width: 0;
+}
+
+
+.kyc-upload-title {
+    color: #1d4ed8;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    max-width: 180px;
+}
+
+
+.kyc-upload-subtitle {
+    color: #64748b;
+
+    font-size: 7px;
+
+    font-weight: 400;
+
+    margin-top: 1px;
+}
+
+
+.kyc-upload-title.selected {
+    color: #16a34a;
+}
+
+
+/* =====================================================
+   UPLOAD ICON
+===================================================== */
+
+.upload-icon {
+    width: 30px;
+
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #e8f8fa;
+
+    border-radius: 6px;
+
+    font-size: 17px;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   SMALL CARD CONTENT
+===================================================== */
+
+.small-card .card {
+    margin-top: 10px;
+
+    gap: 10px;
+}
+
+
+.small-card .lines h3 {
+    font-size: 15px;
+}
+
+
+.small-card .lines h5 {
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   STEP 2
+===================================================== */
+
+#step2 .card {
+    min-height: 210px;
+}
+
+
+/* =====================================================
+   STEP 3
+===================================================== */
+
+#step3 {
+    width: 100%;
+
+    max-width: 100%;
+
+    box-sizing: border-box;
+
+    overflow: visible;
+}
+
+
+#step3 .card {
+    width: 100%;
+
+    max-width: 100%;
+
+    box-sizing: border-box;
+
+    min-height: 240px;
+}
+
+
+#step3 .kyc-row {
+    width: 100%;
+
+    max-width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 10px;
+
+    box-sizing: border-box;
+}
+
+
+#step3 .field {
+    min-width: 0;
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+#step3 input,
+#step3 select {
+    width: 100%;
+
+    max-width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+#step3 .kyc-upload-box {
+    width: 100%;
+
+    max-width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+#step3 .table-wrap {
+    width: 100%;
+
+    max-width: 100%;
+
+    overflow-x: auto;
+}
+
+
+#step3 .kyc-table {
+    width: 100%;
+
+    min-width: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   MULTI STEP FORM
+===================================================== */
+
+.form-step {
+    display: none;
+}
+
+
+.form-step.active {
+    display: block;
+}
+
+
+/* =====================================================
+   STEP PROGRESS
+===================================================== */
+
+.step-progress {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 15px 0 20px;
+}
+
+
+.progress-step {
+    min-width: 110px;
+
+    text-align: center;
+}
+
+
+.step-number {
+    width: 32px;
+
+    height: 32px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border:
+        2px solid #cbd5df;
+
+    background: #ffffff;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.step-title {
+    margin-top: 5px;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    color: #64748b;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   ACTIVE STEP
+===================================================== */
+
+.progress-step.active .step-number {
+    background: #08a6b2;
+
+    border-color: #08a6b2;
+
+    color: #ffffff;
+}
+
+
+.progress-step.active .step-title {
+    color: #08a6b2;
+}
+
+
+/* =====================================================
+   COMPLETED STEP
+===================================================== */
+
+.progress-step.completed .step-number {
+    background: #16a34a;
+
+    border-color: #16a34a;
+
+    color: #ffffff;
+
+    font-size: 0;
+}
+
+
+.progress-step.completed .step-number::after {
+    content: "✓";
+
+    font-size: 16px;
+}
+
+
+.progress-step.completed .step-title {
+    color: #16a34a;
+}
+
+
+/* =====================================================
+   PROGRESS LINE
+===================================================== */
+
+.progress-line {
+    width: 80px;
+
+    height: 2px;
+
+    background: #cbd5df;
+
+    margin: 0 5px 20px;
+}
+
+
+.progress-line.completed {
+    background: #16a34a;
+}
+
+
+/* =====================================================
+   FILE INPUT
+===================================================== */
+
+input[type="file"] {
+    font-size: 9px;
+
+    padding: 3px 5px;
+}
+
+
+/* =====================================================
+   SCREEN WIDTH FIX
+===================================================== */
+
+.customer-form {
+    width: 100%;
+
+    max-width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   RESPONSIVE - 800px
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .row {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .kyc-row {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    #step3 .kyc-row {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .progress-step {
+        min-width: 90px;
+    }
+
+
+    .progress-line {
+        width: 55px;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - 600px
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .step-progress {
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        padding: 0 5px;
+    }
+
+
+    .progress-step {
+        min-width: 75px;
+    }
+
+
+    .progress-line {
+        width: 35px;
+
+        min-width: 35px;
+
+        margin-left: 4px;
+
+        margin-right: 4px;
+    }
+
+
+    .step-title {
+        font-size: 7px;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - 560px
+===================================================== */
+
+@media (max-width: 560px) {
+
+    body {
+        align-items: flex-start;
+
+        padding: 10px;
+    }
+
+
+    .cards {
+        width: 96%;
+
+        padding: 9px 10px;
+    }
+
+
+    .step1-card {
+        min-height: 450px;
+    }
+
+
+    .row,
+    .row.two-col,
+    .kyc-row,
+    #step3 .kyc-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    .nav-actions {
+        gap: 4px;
+    }
+
+
+    .nav-btn {
+        padding: 4px;
+    }
+
+
+    .nav-btn h2 {
+        font-size: 9px;
+    }
+
+
+    .nav-btn h6 {
+        font-size: 7px;
+    }
+
+
+    .button-row {
+        justify-content: stretch;
+    }
+
+
+    .button-row .btn {
+        flex: 1;
+
+        width: auto;
+    }
+
+
+    .master-field-row {
+        gap: 5px;
+    }
+
+
+    .master-add-btn {
+        padding: 0 10px;
+
+        font-size: 9px;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - 400px
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .header-main {
+        align-items: flex-start;
+    }
+
+
+    .nav-actions {
+        flex-direction: column;
+    }
+
+
+    .nav-btn {
+        width: 100%;
+    }
+
+
+    .head-line h2 {
+        font-size: 14px;
+    }
+
+
+    .head-line h5 {
+        font-size: 8px;
+    }
+
+
+    .lines h3 {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =====================================================
+   DIRECTOR DETAILS
+   SMALL PHOTO + SIGNATURE + ADD DIRECTOR
+===================================================== */
+
+/*
+   Keep Photo, Signature and Add Director
+   in ONE ROW.
+*/
+
+#step2 .director-action-row,
+#step3 .director-action-row,
+.director-action-row {
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 8px;
+
+    flex-wrap: nowrap;
+}
+
+
+/* =====================================================
+   DIRECTOR PHOTO FIELD
+===================================================== */
+
+.director-action-row .director-photo-field,
+.director-action-row .photo-field {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+/* =====================================================
+   DIRECTOR SIGNATURE FIELD
+===================================================== */
+
+.director-action-row .director-sign-field,
+.director-action-row .signature-field {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+/* =====================================================
+   DIRECTOR PHOTO / SIGNATURE LABEL
+===================================================== */
+
+.director-action-row label {
+    color: #172033;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    line-height: 1.1;
+}
+
+
+/* =====================================================
+   DIRECTOR PHOTO / SIGNATURE INPUT
+===================================================== */
+
+.director-action-row input[type="file"] {
+    width: 100%;
+
+    height: 29px;
+
+    border:
+        1px solid #cbd5df;
+
+    border-radius: 6px;
+
+    background: #f8fafc;
+
+    padding: 3px 5px;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   DIRECTOR UPLOAD BOX
+===================================================== */
+
+.director-action-row .upload-box,
+.director-action-row .kyc-upload-box {
+    width: 100%;
+
+    height: 29px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 3px 7px;
+
+    border:
+        1px solid #cbd5df;
+
+    border-radius: 6px;
+
+    background: #f8fafc;
+
+    font-size: 9px;
+
+    overflow: hidden;
+}
+
+
+.director-action-row .upload-box img,
+.director-action-row .kyc-upload-box img {
+    width: 15px;
+
+    height: 15px;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   DIRECTOR ADD BUTTON FIELD
+===================================================== */
+
+.director-add-field {
+    width: auto;
+
+    flex: 0 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    gap: 4px;
+}
+
+
+/* =====================================================
+   ADD DIRECTOR BUTTON
+===================================================== */
+
+.director-add-btn {
+    height: 29px;
+
+    width: auto;
+
+    min-width: 88px;
+
+    padding: 0 12px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #4367bc;
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+}
+
+
+.director-add-btn:hover {
+    background: #1d4ed8;
+}
+
+
+.director-add-btn:active {
+    transform: scale(0.97);
+}
+
+
+/* =====================================================
+   IF ADD DIRECTOR USES .btn
+===================================================== */
+
+#step2 .btn.add-director,
+#step3 .btn.add-director,
+.btn.add-director {
+    height: 29px;
+
+    width: auto;
+
+    min-width: 88px;
+
+    padding: 0 12px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #4367bc;
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+
+#step2 .btn.add-director:hover,
+#step3 .btn.add-director:hover,
+.btn.add-director:hover {
+    background: #1d4ed8;
+}
+
+
+/* =====================================================
+   DIRECTOR TABLE
+   SAME SMALL STYLE AS KYC TABLE
+===================================================== */
+
+.director-table-wrap {
+    width: 100%;
+
+    margin-top: 5px;
+
+    overflow-x: auto;
+}
+
+
+/* =====================================================
+   DIRECTOR TABLE
+===================================================== */
+
+.director-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 9px;
+
+    border:
+        1px solid #d5e4eb;
+
+    table-layout: auto;
+}
+
+
+/* =====================================================
+   DIRECTOR TABLE HEADER
+===================================================== */
+
+.director-table th {
+    background: #f1f5f9;
+
+    color: #172033;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    padding: 6px;
+
+    border:
+        1px solid #d5e4eb;
+
+    text-align: left;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   DIRECTOR TABLE DATA
+===================================================== */
+
+.director-table td {
+    padding: 5px 6px;
+
+    border:
+        1px solid #e2e8f0;
+
+    color: #374151;
+
+    font-size: 9px;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   DIRECTOR TABLE ALTERNATE ROW
+===================================================== */
+
+.director-table tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+
+/* =====================================================
+   DIRECTOR TABLE HOVER
+===================================================== */
+
+.director-table tbody tr:hover {
+    background: #f1f5f9;
+}
+
+
+/* =====================================================
+   DIRECTOR TABLE REMOVE BUTTON
+===================================================== */
+
+.director-table .delete-btn {
+    height: 23px;
+
+    padding: 0 7px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #ef4444;
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+
+.director-table .delete-btn:hover {
+    background: #dc2626;
+}
+
+
+/* =====================================================
+   DIRECTOR PHOTO / SIGNATURE TABLE CELL
+===================================================== */
+
+.director-table .photo-cell,
+.director-table .signature-cell {
+    font-size: 9px;
+
+    color: #374151;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   DIRECTOR TABLE INSIDE TABLE-WRAP
+===================================================== */
+
+.table-wrap .director-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 9px;
+}
+
+
+.table-wrap .director-table th {
+    background: #f1f5f9;
+
+    color: #172033;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    padding: 6px;
+
+    border:
+        1px solid #d5e4eb;
+
+    text-align: left;
+
+    white-space: nowrap;
+}
+
+
+.table-wrap .director-table td {
+    padding: 5px 6px;
+
+    border:
+        1px solid #e2e8f0;
+
+    color: #374151;
+
+    font-size: 9px;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   DIRECTOR ROW
+===================================================== */
+
+.director-row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 10px;
+
+    align-items: end;
+
+    width: 100%;
+}
+
+
+/* =====================================================
+   DIRECTOR BUTTON ROW
+===================================================== */
+
+.director-button-row {
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 8px;
+
+    flex-wrap: nowrap;
+}
+
+
+.director-button-row .field {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.director-button-row .add-director {
+    flex: 0 0 auto;
+}
+
+
+/* =====================================================
+   SMALL DIRECTOR FILE BOX
+===================================================== */
+
+.director-file-box {
+    width: 100%;
+
+    height: 29px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    border:
+        1px solid #cbd5df;
+
+    border-radius: 6px;
+
+    background: #f8fafc;
+
+    padding: 3px 7px;
+
+    cursor: pointer;
+
+    font-size: 9px;
+}
+
+
+.director-file-box:hover {
+    background: #eef2f7;
+
+    border-color: #08a6b2;
+}
+
+
+.director-file-box img {
+    width: 15px;
+
+    height: 15px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   DIRECTOR FILE TEXT
+===================================================== */
+
+.director-file-text {
+    min-width: 0;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    font-size: 9px;
+
+    color: #64748b;
+}
+
+
+/* =====================================================
+   DIRECTOR FILE SELECTED
+===================================================== */
+
+.director-file-text.selected {
+    color: #16a34a;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   DIRECTOR ADD BUTTON - EXTRA SMALL
+===================================================== */
+
+.add-director-small {
+    height: 27px;
+
+    min-width: 82px;
+
+    padding: 0 10px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #4367bc;
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+
+.add-director-small:hover {
+    background: #1d4ed8;
+}
+
+
+/* =====================================================
+   DIRECTOR TABLE RESPONSIVE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .director-row {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .director-action-row,
+    .director-button-row {
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+    .director-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    .director-action-row,
+    .director-button-row {
+        flex-wrap: wrap;
+
+        overflow-x: visible;
+    }
+
+
+    .director-action-row .director-photo-field,
+    .director-action-row .photo-field,
+    .director-action-row .director-sign-field,
+    .director-action-row .signature-field {
+        flex: 1 1 100%;
+    }
+
+
+    .director-add-field {
+        width: 100%;
+    }
+
+
+    .director-add-btn,
+    #step2 .btn.add-director,
+    #step3 .btn.add-director,
+    .btn.add-director {
+        width: 100%;
+
+        min-width: 0;
+    }
+
+}
+
+
+/* =====================================================
+   FINAL DIRECTOR STEP FIX
+===================================================== */
+
+#step3 .director-action-row {
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 8px;
+
+    width: 100%;
+
+    flex-wrap: nowrap;
+}
+
+
+#step3 .director-action-row .field {
+    margin: 0;
+
+    min-width: 0;
+}
+
+
+#step3 .director-action-row .director-photo-field,
+#step3 .director-action-row .photo-field,
+#step3 .director-action-row .director-sign-field,
+#step3 .director-action-row .signature-field {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+#step3 .director-action-row .director-add-field {
+    flex: 0 0 auto;
+
+    width: auto;
+
+    min-width: 88px;
+}
+
+
+/* =====================================================
+   DIRECTOR TABLE SMALL HEADER
+===================================================== */
+
+#step3 .director-table th,
+#step3 table.director-table th {
+    font-size: 9px;
+
+    padding: 6px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+#step3 .director-table td,
+#step3 table.director-table td {
+    font-size: 9px;
+
+    padding: 5px 6px;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   DIRECTOR TABLE WHEN NORMAL TABLE CLASS IS USED
+===================================================== */
+
+#step3 table {
+    font-size: 9px;
+}
+
+
+#step3 table th {
+    font-size: 9px;
+
+    padding: 6px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+#step3 table td {
+    font-size: 9px;
+
+    padding: 5px 6px;
+
+    white-space: nowrap;
+}
+
+
+.upload-box {
+    width: 100%;
+    height: 40px;
+    border: 1px dashed #b8b8b8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.upload-box:hover {
+    border-color: #4367bc;
+}
+
+.upload-icon {
+    font-size: 22px;
+}
+
+.upload-text {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.upload-text h2 {
+    margin: 0;
+    font-size: 11px;
+     position: relative;
+    bottom: 10px;
+}
+
+.upload-text h6 {
+    margin: 3px 0 0;
+    font-size: 8px;
+    font-weight: normal;
+}

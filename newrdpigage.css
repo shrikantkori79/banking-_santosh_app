@@ -1,0 +1,572 @@
+@charset "UTF-8";
+
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+    margin: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d1117,
+            #1f2937
+        );
+
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =====================================================
+   MAIN FORM
+===================================================== */
+
+.customer-form {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 40px 10px;
+}
+
+
+/* =====================================================
+   MAIN CARD
+===================================================== */
+
+.cards {
+    width: 650px;
+
+    height: 60%;
+
+    background-color: #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.2);
+
+    padding: 10px 30px 20px;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header-customer {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    padding: 5px 0 10px;
+
+    border-bottom:
+        1px solid #e5e7eb;
+
+    gap: 8px;
+}
+
+
+.header-main {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    width: 100%;
+
+    height: 30px;
+}
+
+
+.header-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.header-img {
+    width: 60px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.header-img img {
+    width: 40px;
+
+    height: 60px;
+
+    object-fit: contain;
+}
+
+
+.head-line {
+    display: flex;
+
+    flex-direction: column;
+
+    position: relative;
+
+    bottom: 15px;
+}
+
+
+.head-line h2 {
+    margin: 0;
+
+    color: #031946;
+
+    font-size: 13px;
+
+    position: relative;
+
+    top: 20px;
+}
+
+
+.head-line h5 {
+    margin: 0;
+
+    color: #4b5563;
+
+    font-size: 11px;
+
+    position: relative;
+
+    top: 20px;
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.card {
+    width: 100%;
+  
+
+    padding-top: 15px;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.lines {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    margin-bottom: 12px;
+}
+
+
+.lines h3 {
+    margin: 0;
+
+    color: #1f73c9;
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   ROW
+===================================================== */
+
+.row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(100px, 1fr)
+        );
+
+    gap: 12px;
+
+    align-items: end;
+
+    margin-bottom: 10px;
+}
+
+
+.two-col {
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(180px, 1fr)
+        );
+}
+
+
+.three-col {
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(140px, 1fr)
+        );
+}
+
+
+.one-col {
+    grid-template-columns:
+        minmax(180px, 1fr);
+
+    width: 100%;
+}
+
+
+/* =====================================================
+   FIELD
+===================================================== */
+
+.field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    min-width: 0;
+}
+
+
+.field label {
+    font-weight: 600;
+
+    color: #1f2937;
+
+    font-size: 0.82rem;
+
+    line-height: 1.2;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   INPUT + SELECT
+===================================================== */
+
+.date {
+    width: 150px;
+}
+
+
+input,
+select {
+    width: 100%;
+
+    height: 34px;
+
+    padding: 6px 10px;
+
+    border:
+        1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    font-size: 0.9rem;
+
+    background-color: #f9fafb;
+
+    color: #111827;
+}
+
+
+input:focus,
+select:focus {
+    outline: none;
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.1);
+}
+
+
+select:disabled {
+    background-color: #f0f0f0;
+
+    color: #9ca3af;
+
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   CREATE NEW HEAD BUTTON
+===================================================== */
+
+.create-head-btn {
+    width: 100%;
+
+    height: 34px;
+
+    padding: 6px 12px;
+
+    border: 1px solid #2563eb;
+
+    border-radius: 10px;
+
+    background-color: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.create-head-btn:hover {
+    background-color: #dbeafe;
+
+    border-color: #1d4ed8;
+
+    color: #1d4ed8;
+}
+
+
+/* =====================================================
+   BUTTON ROW
+===================================================== */
+
+.button-row {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding-top: 15px;
+
+    border-top:
+        1px solid #e5e7eb;
+}
+
+
+/* =====================================================
+   COMMON BUTTON
+===================================================== */
+
+.btn {
+    border: none;
+
+    border-radius: 10px;
+
+    min-width: 100px;
+
+    height: 38px;
+
+    padding: 8px 22px;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =====================================================
+   CANCEL BUTTON
+===================================================== */
+
+.btn.cancle {
+    background-color: #e5e7eb;
+
+    color: #111827;
+
+    border:
+        1px solid #d1d5db;
+}
+
+
+.btn.cancle:hover {
+    background-color: #d1d5db;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 4px 10px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+/* =====================================================
+   SAVE BUTTON
+===================================================== */
+
+.btn.save {
+    background-color: #2563eb;
+
+    color: #ffffff;
+
+    border:
+        1px solid #2563eb;
+}
+
+
+.btn.save:hover {
+    background-color: #1d4ed8;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 4px 10px
+        rgba(37, 99, 235, 0.25);
+}
+
+
+/* =====================================================
+   EXIT BUTTON
+===================================================== */
+
+.btn.exit {
+    background-color: #dc2626;
+
+    color: #ffffff;
+
+    border:
+        1px solid #dc2626;
+}
+
+
+.btn.exit:hover {
+    background-color: #b91c1c;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 4px 10px
+        rgba(220, 38, 38, 0.25);
+}
+
+
+/* =====================================================
+   BUTTON ACTIVE
+===================================================== */
+
+.btn:active {
+    transform: translateY(0);
+
+    box-shadow: none;
+}
+.requred {
+    color: red;
+    font-size: 12px;
+    margin-left: 2px;
+}
+
+.validation-message {
+
+   
+    visibility: hidden;
+}
+
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 720px) {
+
+    .cards {
+        width: 95vw;
+
+        height: auto;
+
+        min-height: 55vh;
+
+        padding:
+            10px 20px 20px;
+    }
+
+
+    .three-col,
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+
+
+    .button-row {
+        justify-content: stretch;
+    }
+
+
+    .btn {
+        flex: 1;
+
+        min-width: 0;
+    }
+
+}
